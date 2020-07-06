@@ -1,0 +1,83 @@
+<h3>Atualiza Cadastro de Pessoa</h3>
+<div style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="nome"
+        required [(ngModel)]="pessoa.nome"
+        name="nome"
+      >
+    </div>
+
+    <div class="form-group">
+      <label for="cpf">CPF</label>
+      <input type="text" class="form-control" id="cpf" required [(ngModel)]="pessoa.cpf" disabled name="cpf">
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" required [(ngModel)]="pessoa.email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="dataNascimento">Data Nascimento</label>
+      <input type="date" class="form-control" id="dataNascimento" required [(ngModel)]="pessoa.dataNascimento" name="dataNascimento">
+    </div>
+
+    <div class="form-group">
+      <label for="nacionalidade">Nacionalidade</label>
+      <input type="text" class="form-control" id="nacionalidade" required [(ngModel)]="pessoa.nacionalidade" name="nacionalidade">
+    </div>
+
+    <div class="form-group">
+      <label for="naturalidade">Naturalidade</label>
+      <input type="text" class="form-control" id="naturalidade" required [(ngModel)]="pessoa.naturalidade" name="naturalidade">
+    </div>
+
+    <div class="form-group">
+      <label for="sexo">Sexo</label>
+      <input type="text" class="form-control" id="sexo" required [(ngModel)]="pessoa.sexo" name="sexo">
+    </div>
+
+    <h4>Endereço</h4>
+
+    <div class="form-group">
+      <label for="cep">CEP</label>
+      <input type="text" class="form-control" id="cep" required [(ngModel)]="endereco.cep" name="cep">
+    </div>
+
+    <div class="form-group">
+      <label for="rua">Rua</label>
+      <input type="text" class="form-control" id="rua" required [(ngModel)]="endereco.rua" name="rua">
+    </div>
+
+    <div class="form-group">
+      <label for="numero">Número</label>
+      <input type="text" class="form-control" id="numero" required [(ngModel)]="endereco.numero" name="numero">
+    </div>
+
+    <div class="form-group">
+      <label for="bairro">Bairro</label>
+      <input type="text" class="form-control" id="bairro" required [(ngModel)]="endereco.bairro" name="bairro">
+    </div>
+
+    <div class="form-group">
+      <label for="cidade">Cidade</label>
+      <input type="text" class="form-control" id="cidade" required [(ngModel)]="endereco.cidade" name="cidade">
+    </div>
+
+    <div class="form-group">
+      <label for="uf">UF</label>
+      <input type="text" class="form-control" id="uf" required [(ngModel)]="endereco.uf" name="uf">
+    </div>
+
+    <div class="form-group">
+      <label for="complemento">Complmento</label>
+      <input type="text" class="form-control" id="complemento" required [(ngModel)]="endereco.complemento" name="complemento">
+    </div>
+
+    <button type="submit" class="btn btn-success">Atualizar</button>
+  </form>
+</div>

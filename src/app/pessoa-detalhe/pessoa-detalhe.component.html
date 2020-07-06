@@ -1,0 +1,54 @@
+<h2>Detalhe Pessoa</h2>
+
+<hr/>
+<div *ngIf="pessoa">
+  <h3>Dados Pessoais</h3>
+  <div>
+    <label><b>Nome: </b></label> {{pessoa.nome}}
+  </div>
+  <div>
+    <label><b>CPF: </b></label> {{pessoa.cpf}}
+  </div>
+  <div>
+    <label><b>Email: </b></label> {{pessoa.email}}
+  </div>
+  <div>
+    <label><b>Data Nascimento: </b></label> {{pessoa.dataNascimento}}
+  </div>
+  <div>
+    <label><b>Nacionalidade: </b></label> {{pessoa.nacionalidade}}
+  </div>
+  <div>
+    <label><b>Naturalidade: </b></label> {{pessoa.naturalidade}}
+  </div>
+  <div>
+    <label><b>Sexo: </b></label> {{pessoa.sexo}}
+  </div>
+
+  <h3>Endereço</h3>
+  <div>
+    <label><b>CEP: </b></label> {{pessoa.endereco.cep}}
+  </div>
+  <div>
+    <label><b>Rua: </b></label> {{pessoa.endereco.rua}}
+  </div>
+  <div>
+    <label><b>Número: </b></label> {{pessoa.endereco.numero}}
+  </div>
+  <div>
+    <label><b>Bairro: </b></label> {{pessoa.endereco.bairro}}
+  </div>
+  <div>
+    <label><b>Cidade: </b></label> {{pessoa.endereco.cidade}}
+  </div>
+  <div>
+    <label><b>UF: </b></label> {{pessoa.endereco.uf}}
+  </div>
+  <div>
+    <label><b>Complemento: </b></label> {{pessoa.endereco.complemento}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Voltar a Listagem</button><br>
