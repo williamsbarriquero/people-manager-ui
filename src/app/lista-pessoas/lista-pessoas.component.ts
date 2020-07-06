@@ -11,7 +11,7 @@ import { PessoaService } from '../pessoa.service';
   styleUrls: ['./lista-pessoas.component.css']
 })
 export class ListaPessoasComponent implements OnInit {
-  pessoas: Observable<Pessoa[]>
+  pessoas: Observable<Pessoa[]>;
 
   constructor(private pessoaService: PessoaService, private router: Router) { }
 

@@ -1,11 +1,11 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-
 import * as moment from 'moment';
 
 import { Pessoa } from '../pessoa';
 import { PessoaService } from '../pessoa.service';
 import { Endereco } from '../endereco';
+import { hiddenEndereco } from '../util/hiddenEndereco';
 
 @Component({
   selector: 'app-cria-pessoa',
@@ -17,23 +17,23 @@ export class CriaPessoaComponent implements OnInit {
   pessoa: Pessoa = new Pessoa();
   endereco: Endereco = new Endereco();
   submitted = false;
-  hiddenEndereco = true;
+  hidden = hiddenEndereco() === 1;
 
-  constructor(private pessoaServicxe: PessoaService,
+  constructor(
+    private pessoaServicxe: PessoaService,
     private router: Router) { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
   newPessoa(): void {
     this.submitted = false;
     this.pessoa = new Pessoa();
-    this.endereco = new Endereco();
+
+    if (!this.hidden) this.endereco = new Endereco();
   }
 
   save() {
-    this.pessoa.endereco = this.endereco;
+    if (!this.hidden) this.pessoa.endereco = this.endereco;
     this.pessoa.dataNascimento = moment(this.pessoa.dataNascimento).format('YYYY-MM-DD')
 
     this.pessoaServicxe.criaPessoa(this.pessoa)

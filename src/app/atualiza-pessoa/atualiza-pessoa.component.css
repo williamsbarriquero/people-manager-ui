@@ -1,0 +1,13 @@
+form {
+  width: 100%;
+  display: inline-block;
+}
+
+form input {
+  width: 90%;
+}
+
+.form-container {
+  width: 100%;
+  display: flex;
+}

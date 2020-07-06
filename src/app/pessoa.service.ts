@@ -8,11 +8,11 @@ import { environment } from './../environments/environment';
   providedIn: 'root'
 })
 export class PessoaService {
+  private baseUrl:string;
 
-  private apiVersion = environment.apiVersion;
-  private baseUrl = `http://localhost:8080/api/${this.apiVersion}/pessoas`;
-
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseUrl = `http://localhost:8080/api/${environment.apiVersion}/pessoas`;
+  }
 
   getPessoa(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/${id}`);

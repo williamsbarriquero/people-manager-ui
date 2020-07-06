@@ -3,8 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { Pessoa } from '../pessoa';
 import { PessoaService } from '../pessoa.service';
-
-import { ListaPessoasComponent } from '../lista-pessoas/lista-pessoas.component';
+import { hiddenEndereco } from '../util/hiddenEndereco';
 
 @Component({
   selector: 'app-pessoa-detalhe',
@@ -15,6 +14,7 @@ export class PessoaDetalheComponent implements OnInit {
 
   id: number;
   pessoa: Pessoa;
+  hidden = hiddenEndereco() === 1;
 
   constructor(private route: ActivatedRoute,private router: Router,
     private pessoaService: PessoaService) { }

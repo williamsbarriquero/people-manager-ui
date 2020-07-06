@@ -1,6 +1,6 @@
 <h2>Detalhe Pessoa</h2>
 
-<hr/>
+<hr />
 <div *ngIf="pessoa">
   <h3>Dados Pessoais</h3>
   <div>
@@ -25,28 +25,31 @@
     <label><b>Sexo: </b></label> {{pessoa.sexo}}
   </div>
 
-  <h3>Endereço</h3>
-  <div>
-    <label><b>CEP: </b></label> {{pessoa.endereco.cep}}
+  <div [hidden]="hidden">
+    <h3>Endereço</h3>
+    <div>
+      <label><b>CEP: </b></label> {{pessoa.endereco?.cep}}
+    </div>
+    <div>
+      <label><b>Rua: </b></label> {{pessoa.endereco?.rua}}
+    </div>
+    <div>
+      <label><b>Número: </b></label> {{pessoa.endereco?.numero}}
+    </div>
+    <div>
+      <label><b>Bairro: </b></label> {{pessoa.endereco?.bairro}}
+    </div>
+    <div>
+      <label><b>Cidade: </b></label> {{pessoa.endereco?.cidade}}
+    </div>
+    <div>
+      <label><b>UF: </b></label> {{pessoa.endereco?.uf}}
+    </div>
+    <div>
+      <label><b>Complemento: </b></label> {{pessoa.endereco?.complemento}}
+    </div>
   </div>
-  <div>
-    <label><b>Rua: </b></label> {{pessoa.endereco.rua}}
-  </div>
-  <div>
-    <label><b>Número: </b></label> {{pessoa.endereco.numero}}
-  </div>
-  <div>
-    <label><b>Bairro: </b></label> {{pessoa.endereco.bairro}}
-  </div>
-  <div>
-    <label><b>Cidade: </b></label> {{pessoa.endereco.cidade}}
-  </div>
-  <div>
-    <label><b>UF: </b></label> {{pessoa.endereco.uf}}
-  </div>
-  <div>
-    <label><b>Complemento: </b></label> {{pessoa.endereco.complemento}}
-  </div>
+
 </div>
 
 <br>
