@@ -11,7 +11,7 @@
 4. Este projeto tem compatibilidade com as versões `v1` e `v2` da API REST, para testar esse comportamento abra o arquivo `src/environments/environment.ts` e edite a propriedade `apiVersion` com o valor da versão. `Ex: apiVersion: 'v1'`
 > Os Valores de versões conhecidos são __v1__ e __v2__, qualquer valor que não seja nenhum dos dois será ignorado e você terá dificuldades na comunicção com a API REST.
 
-### Contributing
+### Contribuindo
 
 - Faça um fork desse repositório;
 - Cria uma branch com sua feature: `git checkout -b minha-feature`;
